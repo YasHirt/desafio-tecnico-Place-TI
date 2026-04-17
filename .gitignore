@@ -1,0 +1,22 @@
+# Pasta de configurações do JetBrains
+.idea/
+
+# Arquivos de projeto específicos do usuário
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# Arquivos de dados de dataSource (sensíveis)
+.idea/**/dataSources/
+.idea/**/dataSources.local.xml
+
+# Arquivos de módulo do IntelliJ
+*.iml
+*.ipr
+*.iws
+
+# Build e arquivos gerados
+out/
+build/
+target/
