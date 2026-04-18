@@ -7,18 +7,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 //------------------------------------------------------------------
 /** Service usado para acessar os repositórios da aplicação */
 //------------------------------------------------------------------
 @Service
-public class ProjetoService {
+public class CidadeService {
     private final CidadeRepository cidadeRepository;
 	private final Logger logger = LoggerFactory.getLogger(getClass());
 
-    public ProjetoService(CidadeRepository cp) {
+    public CidadeService(CidadeRepository cp) {
         this.cidadeRepository = cp;
     }
 	//---------------------------------------------------------
