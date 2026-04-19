@@ -1,6 +1,6 @@
 package com.placeti.avaliacao.service;
 
-import com.placeti.avaliacao.Exceptions.ComercioNotFoundException;
+import com.placeti.avaliacao.exceptions.ComercioNotFoundException;
 import com.placeti.avaliacao.dto.ComercioDTO;
 import com.placeti.avaliacao.model.Comercio;
 import com.placeti.avaliacao.repository.ComercioRepository;

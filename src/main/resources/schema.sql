@@ -12,7 +12,7 @@ create table Cidade(
 drop table if exists Comercio;
 
 create table Comercio(
-    id int no null AUTO_INCREMENT,
+    id int not null AUTO_INCREMENT,
     nome_comercio varchar(100) not null,
     responsavel_comercio varchar(100) not null,
     tipo_comercio varchar(100) not null,

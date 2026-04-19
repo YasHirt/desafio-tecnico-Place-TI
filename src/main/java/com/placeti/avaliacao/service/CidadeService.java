@@ -1,6 +1,6 @@
 package com.placeti.avaliacao.service;
 
-import com.placeti.avaliacao.Exceptions.CityNotFoundException;
+import com.placeti.avaliacao.exceptions.CityNotFoundException;
 import com.placeti.avaliacao.dto.CidadeDTO;
 import com.placeti.avaliacao.model.Cidade;
 import com.placeti.avaliacao.repository.CidadeRepository;
