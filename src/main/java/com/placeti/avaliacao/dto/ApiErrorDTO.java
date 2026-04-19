@@ -1,6 +1,6 @@
 package com.placeti.avaliacao.dto;
 
-public record ApiError(
+public record ApiErrorDTO(
                        int status,
                        String error,
                        String message

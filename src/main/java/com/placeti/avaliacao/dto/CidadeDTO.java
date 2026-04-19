@@ -10,11 +10,11 @@ import jakarta.validation.constraints.NotNull;
 public record CidadeDTO(
                         //id validada no services para não gerar conflito entre post e put
                         Long id,
-                        @NotBlank(message="Nome é obrigatório")
+                        @NotBlank(message="Nome é obrigatório") //Não é nula, não é vazia, não é só espaços
                         String nome,
                         @NotBlank(message = "Uf é obrigatória")
                         String uf,
-                        @NotNull(message = "Campo capital é obrigatório")
-                        boolean capital) {
+                        @NotNull(message = "Campo capital é obrigatório") //false por padrão
+                        Boolean capital) {
 
 }
