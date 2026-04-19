@@ -9,14 +9,14 @@ INSERT INTO Cidade (nome, uf, capital) VALUES ('Anápolis', 'GO', 0);
 INSERT INTO Cidade (nome, uf, capital) VALUES ('Pouso Alegre', 'MG', 0);
 INSERT INTO Cidade (nome, uf, capital) VALUES ('Volta Redonda', 'RJ', 0);
 
-INSERT INTO Comercio (nome_comercio, responsavel_comercio, tipo_comercio) VALUES
-('Padaria Central', 'João Silva', 'Padaria'),
-('Mercado Bom Preço', 'Maria Souza', 'Supermercado'),
-('Farmácia Vida', 'Carlos Pereira', 'Farmácia'),
-('Restaurante Sabor Caseiro', 'Ana Oliveira', 'Restaurante'),
-('Loja Tech Info', 'Lucas Fernandes', 'Eletrônicos'),
-('Açougue Boi Feliz', 'Pedro Santos', 'Açougue'),
-('Café Aroma', 'Juliana Costa', 'Cafeteria'),
-('Papelaria Estudante', 'Fernanda Lima', 'Papelaria'),
-('Pet Shop Amigo Fiel', 'Ricardo Alves', 'Petshop'),
-('Academia Corpo Ativo', 'Bruno Rocha', 'Academia');
+INSERT INTO Comercio (nome_comercio, responsavel_comercio, tipo_comercio, cidade_id) VALUES
+('Padaria Central', 'João Silva', 'Padaria', 1),
+('Mercado Bom Preço', 'Maria Souza', 'Supermercado', 1),
+('Farmácia Vida', 'Carlos Pereira', 'Farmácia', 2),
+('Restaurante Sabor Caseiro', 'Ana Oliveira', 'Restaurante', 2),
+('Loja Tech Info', 'Lucas Fernandes', 'Eletrônicos', 3),
+('Açougue Boi Feliz', 'Pedro Santos', 'Açougue', 3),
+('Café Aroma', 'Juliana Costa', 'Cafeteria', 1),
+('Papelaria Estudante', 'Fernanda Lima', 'Papelaria', 2),
+('Pet Shop Amigo Fiel', 'Ricardo Alves', 'Petshop', 3),
+('Academia Corpo Ativo', 'Bruno Rocha', 'Academia', 1);

@@ -16,5 +16,7 @@ create table Comercio(
     nome_comercio varchar(100) not null,
     responsavel_comercio varchar(100) not null,
     tipo_comercio varchar(100) not null,
-    PRIMARY KEY (id)
+    id_cidade int not null,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id_cidade) REFERENCES Cidade(id)
 );

@@ -19,9 +19,13 @@ public class Comercio {
     @Column(name="nome_comercio", nullable = false)
     private String nomeComercio;
 
-    @Column(name ="responsavel_comercio")
+    @Column(name ="responsavel_comercio", nullable = false)
     private String responsavelComercio;
 
     @Column(name = "tipo_comercio", nullable = false)
     private String tipoComercio;
+
+    @ManyToOne
+    @JoinColumn(name = "id_cidade")
+    private Cidade cidade;
 }

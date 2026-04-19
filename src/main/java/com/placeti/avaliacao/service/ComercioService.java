@@ -48,9 +48,6 @@ public class ComercioService {
         Comercio comercioPersistido = comercioRepository.save(comercio);
         return toDTO(comercioPersistido);
     }
-
-
-
     public ComercioDTO alterarComercio(ComercioDTO c)
     {
         if (c.id() == null)
