@@ -4,6 +4,7 @@ import com.placeti.avaliacao.exceptions.CityNotFoundException;
 import com.placeti.avaliacao.dto.CidadeDTO;
 import com.placeti.avaliacao.model.Cidade;
 import com.placeti.avaliacao.repository.CidadeRepository;
+import jakarta.validation.constraints.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -80,4 +81,12 @@ public class CidadeService {
             cidadeRepository.deleteById(idCidade);
 
 	}
+    //----------------------------------------------------------
+    /** Método usado para transferir dados entre camadas internas */
+    //----------------------------------------------------------
+
+    public Cidade buscarEntidadePorId(@NotNull(message = "Id cidade não pode ser nulo") Long idCidade) {
+        return cidadeRepository.findById(idCidade)
+                .orElseThrow(() -> new CityNotFoundException("Cidade não encontrada com esse id"));
+    }
 }

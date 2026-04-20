@@ -9,7 +9,7 @@ INSERT INTO Cidade (nome, uf, capital) VALUES ('Anápolis', 'GO', 0);
 INSERT INTO Cidade (nome, uf, capital) VALUES ('Pouso Alegre', 'MG', 0);
 INSERT INTO Cidade (nome, uf, capital) VALUES ('Volta Redonda', 'RJ', 0);
 
-INSERT INTO Comercio (nome_comercio, responsavel_comercio, tipo_comercio, cidade_id) VALUES
+INSERT INTO Comercio (nome_comercio, responsavel_comercio, tipo_comercio, id_cidade) VALUES
 ('Padaria Central', 'João Silva', 'Padaria', 1),
 ('Mercado Bom Preço', 'Maria Souza', 'Supermercado', 1),
 ('Farmácia Vida', 'Carlos Pereira', 'Farmácia', 2),

@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface ComercioRepository extends JpaRepository<Comercio, Long> {
-    List<Comercio> findByIdCidade(Long id);
+    List<Comercio> findByCidadeId(Long id_cidade);
 }
