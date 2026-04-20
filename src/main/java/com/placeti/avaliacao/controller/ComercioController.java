@@ -38,7 +38,8 @@ public class ComercioController {
 //        {
 //                "nomeComercio": "Comércio dos Momolangos",
 //                "responsavelComercio": "Yasmin e Maximus",
-//                "tipoComercio": "Cafeteria"
+//                "tipoComercio": "Cafeteria",
+//                 "idCidade": 1
 //        }
         ComercioDTO comercioResponse = comercioService.incluirComercio(comercioDTO);
         return ResponseEntity.status(HttpStatus.CREATED).body(comercioResponse);

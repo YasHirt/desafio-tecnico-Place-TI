@@ -10,6 +10,7 @@ import java.util.List;
 
 @Service
 public class ComercioService {
+
     private final ComercioRepository comercioRepository;
     private final CidadeService cidadeService;
 
@@ -79,5 +80,20 @@ public class ComercioService {
         comercioRepository.findById(id)
             .orElseThrow(() -> new ComercioNotFoundException("Comercio não encontrado com esse ID"));
         comercioRepository.deleteById(id);
+    }
+    public List<ComercioDTO> buscarComerciosPorIdCidadeETipo(Long idCidade, String tipo)
+    {
+        cidadeService.buscarEntidadePorId(idCidade); //valida existencia
+        if(tipo == null || tipo.isBlank())
+        {
+            return comercioRepository.findByCidadeId(idCidade).stream()
+                    .map(this::toDTO)
+                    .toList();
+        }
+        return comercioRepository.findByTipoComercio(tipo)
+                .stream()
+                .map(this::toDTO)
+                .toList();
+
     }
 }

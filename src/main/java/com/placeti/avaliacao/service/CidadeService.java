@@ -25,6 +25,7 @@ public class CidadeService {
 	/** Método que busca uma cidade pelo seu ID */
 	//---------------------------------------------------------
 	public CidadeDTO pesquisarCidade(Long id) {
+
         Cidade c = cidadeRepository.findById(id).orElseThrow(
                 () -> new CityNotFoundException("Cidade não encontrada com id: " + id)
         );

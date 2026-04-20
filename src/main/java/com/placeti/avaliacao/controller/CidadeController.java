@@ -1,7 +1,9 @@
 package com.placeti.avaliacao.controller;
 
 import com.placeti.avaliacao.dto.CidadeDTO;
+import com.placeti.avaliacao.dto.ComercioDTO;
 import com.placeti.avaliacao.service.CidadeService;
+import com.placeti.avaliacao.service.ComercioService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
 import org.springframework.http.ResponseEntity;
@@ -16,12 +18,14 @@ import java.util.List;
 @RequestMapping("/cidades")
 public class CidadeController {
     private final CidadeService cidadeService;
-    public CidadeController(CidadeService ps)
+    private final ComercioService comercioService;
+    public CidadeController(CidadeService ps, ComercioService cs)
     {
         this.cidadeService = ps;
+        this.comercioService = cs;
     }
 	//----------------------------------------------------------
-	/** Endpoint que retorna uma cidade conforme seu ID */
+	/** Endpoint que retorna uma cidade conforme o seu ‘ID’ */
 	//----------------------------------------------------------
     @GetMapping("/{id}")
 	public ResponseEntity<CidadeDTO> buscarPeloId(@PathVariable("id") @Min(1) Long id) {
@@ -63,4 +67,16 @@ public class CidadeController {
 		//  TODO Responde DELETE em http://localhost:8080/placeti/cidades/{idCidade}
         cidadeService.excluirCidade(idCidade);
 	}
+    //----------------------------------------------------------
+    /** Endpoint de relacionamento cidade-comercio */
+    /** GET /cidades/1/comercios?tipo=padaria */
+    //----------------------------------------------------------
+    @GetMapping("/{id}/comercios")
+    public ResponseEntity<List<ComercioDTO>> buscarComerciosPorIdCidade(@PathVariable("id") @Min(1) Long idCidade,
+                                                                        @RequestParam(required = false) String tipo)
+    {
+     return ResponseEntity.ok().body(comercioService.buscarComerciosPorIdCidadeETipo(idCidade, tipo)) ;
+    }
+
+
 }

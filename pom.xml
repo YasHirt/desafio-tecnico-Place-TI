@@ -44,6 +44,8 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+        <!-- Source: https://mvnrepository.com/artifact/junit/junit -->
+
 	</dependencies>
 
 	<build>
