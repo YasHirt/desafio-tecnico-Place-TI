@@ -6,6 +6,7 @@ import com.placeti.avaliacao.service.CidadeService;
 import com.placeti.avaliacao.service.ComercioService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -77,6 +78,24 @@ public class CidadeController {
     {
      return ResponseEntity.ok().body(comercioService.buscarComerciosPorIdCidadeETipo(idCidade, tipo)) ;
     }
-
-
+    //----------------------------------------------------------
+    /** Endpoint de pequena documentação de cidades */
+    //----------------------------------------------------------
+    @GetMapping("/docs")
+    public ResponseEntity<String> documentacao()
+    {
+        String html = """
+        <h1> Documentação </h1>
+         <ul>
+          <li> GET placeti/cidades </li>
+          <li> GET placeti/cidades/id </li>
+          <li> POST placeti/cidades </li>
+          <li> PUT placeti/cidades </li>
+          <li> DELETE placeti/cidades/id </li>
+          <li> GET placeti/cidades/id/comercios </li>
+          <li> GET /cidades/docs </li>
+          </ul>
+       """;
+        return ResponseEntity.status(HttpStatus.OK).header("Content-Type", "text/html").body(html);
+    }
 }
