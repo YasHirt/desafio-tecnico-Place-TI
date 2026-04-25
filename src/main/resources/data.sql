@@ -19,4 +19,6 @@ INSERT INTO Comercio (nome_comercio, responsavel_comercio, tipo_comercio, id_cid
 ('Café Aroma', 'Juliana Costa', 'Cafeteria', 1),
 ('Papelaria Estudante', 'Fernanda Lima', 'Papelaria', 2),
 ('Pet Shop Amigo Fiel', 'Ricardo Alves', 'Petshop', 3),
-('Academia Corpo Ativo', 'Bruno Rocha', 'Academia', 1);
+('Academia Corpo Ativo', 'Bruno Rocha', 'Academia', 1),
+('Papéis e CIA', 'Carlos Roberto', 'Papelaria', 3),
+('Padaria Bonanza', 'Yasmin Hirt', 'Padaria', 1);

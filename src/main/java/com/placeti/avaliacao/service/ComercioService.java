@@ -92,6 +92,7 @@ public class ComercioService {
         }
         return comercioRepository.findByTipoComercio(tipo)
                 .stream()
+                .filter(c -> c.getCidade().getId().equals(idCidade))
                 .map(this::toDTO)
                 .toList();
 
